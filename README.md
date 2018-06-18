@@ -210,17 +210,29 @@ public class SiteApplication extends SpringBootServletInitializer{
 replace  
 
 ```
-server.contextPath=/
+<finalName>ROOT</finalName>
 ```
 
 by 
 
 ```
-server.contextPath=/site
+<finalName>site</finalName>
 ```
 
-in ../blc/site/resources/runtime-properties/default.properties  
+in ../blc/site/pom.xml  
 the original setting will generate the war file with name ROOT.war
+
+#### note
+
+if you will use nginx, like abc.com instead of abc.com/admin, you can set
+
+```
+server.contextPath=/
+```
+
+in .../blc/admin/resources/runtime-properties/default.properties  
+
+the same to site
 
 
 
