@@ -8,7 +8,7 @@
     
     <modelVersion>4.0.0</modelVersion>
     <artifactId>boot-community-demo-site</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     
     <name>Community Demo Site</name>
     <description>Web Module For Customized Broadleaf Commerce Site</description>
@@ -18,7 +18,7 @@
     </properties>
     
     <build>
-        <finalName>ROOT</finalName>
+        <finalName>site</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -60,6 +60,11 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>

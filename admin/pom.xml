@@ -9,7 +9,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>boot-community-demo-admin</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>Community Demo Admin</name>
     <description>Web Module For Customized Broadleaf Commerce Admin</description>
@@ -65,6 +65,11 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>

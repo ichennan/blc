@@ -147,6 +147,80 @@ mvn spring-boot:run
 
 it recommend not using mysql 5.7, but i try and it works.  
 
+### step 3: tomcat (not deploy demo-api)
+
+#### 3.1 remove ssl
+
+remove 
+
+```
+.requiresChannel().antMatchers("/**").requiresSecure().and()
+```
+
+from AdminSecurityConfig.java and SiteSecurityConfig.java
+
+#### 3.2 change to war file in pom
+
+replace
+
+```
+<packaging>jar</packaging>
+```
+
+by
+
+```
+<packaging>war</packaging>
+```
+
+and add
+
+```
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+```
+
+to ../blc/admin/pom.xml and ../blc/site/pom.xml
+
+#### 3.3 extends Application from SpringBootServletInitializer 
+
+update AdminApplication and SiteApplication
+
+```
+public class AdminApplication extends SpringBootServletInitializer{
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(AdminApplication.class);
+    }
+}
+
+public class SiteApplication extends SpringBootServletInitializer{
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SiteApplication.class);
+    }
+}
+```
+
+#### 3.4 change the file name of war of site
+
+replace  
+
+```
+server.contextPath=/
+```
+
+by 
+
+```
+server.contextPath=/site
+```
+
+in ../blc/site/resources/runtime-properties/default.properties  
+the original setting will generate the war file with name ROOT.war
 
 
 
