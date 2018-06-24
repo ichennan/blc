@@ -78,7 +78,7 @@ public class CoreEmailConfig {
     @Bean
     public EmailInfo blOrderConfirmationEmailInfo() {
         EmailInfo info = blEmailInfo();
-        info.setSubject("Your order with The Heat Clinic");
+        info.setSubject("Your order with Togood");
         info.setEmailTemplate("orderConfirmation-email");
         return info;
     }
@@ -86,7 +86,7 @@ public class CoreEmailConfig {
     @Bean
     public EmailInfo blFulfillmentOrderTrackingEmailInfo() {
         EmailInfo info = blEmailInfo();
-        info.setSubject("Your order with The Heat Clinic Has Shipped");
+        info.setSubject("Your order with Togood Has Shipped");
         info.setEmailTemplate("fulfillmentOrderTracking-email");
         return info;
     }
@@ -94,7 +94,7 @@ public class CoreEmailConfig {
     @Bean
     public EmailInfo blReturnAuthorizationEmailInfo() {
         EmailInfo info = blEmailInfo();
-        info.setSubject("Your return with The Heat Clinic");
+        info.setSubject("Your return with Togood");
         info.setEmailTemplate("returnAuthorization-email");
         return info;
     }
@@ -102,7 +102,7 @@ public class CoreEmailConfig {
     @Bean
     public EmailInfo blReturnConfirmationEmailInfo() {
         EmailInfo info = blEmailInfo();
-        info.setSubject("Your return with The Heat Clinic");
+        info.setSubject("Your return with Togood");
         info.setEmailTemplate("returnConfirmation-email");
         return info;
     }
