@@ -4,9 +4,33 @@
     </head>
 
     <div class="section">
+        <div class="containerCentered container4d2p1m container">
+            <div class=" span3 col-sm-6 col-lg-3">
+                <h3 class="contentHead">Company Name</h3>
+                <p class="contentPara">Shenzhen Baolaite Trading Co.,Ltd</p>
+            </div>
+            <div class=" span3 col-sm-6 col-lg-3">
+                <h3 class="contentHead">Contacts</h3>
+                <p class="contentPara">Miaosheng Chen<br/>
+                    +86 137 6011 8509<br/>
+                    <a href="mailto:miaoshengchen@sina.com">miaoshengchen@sina.com</a>
+                </p>
+            </div>
+            <div class="clearfix visible-sm ui-hidden-mobile ui-hidden-dedicated"></div>
+            <div class=" span3 col-sm-6 col-lg-3">
+                <h3>Official Website</h3>
+                <p><a href="https://www.togood.vip/" pa-marked="1">www.togood.vip</a></p>
+            </div>
+            <div class=" span3 col-sm-6 col-lg-3">
+                <h3>Head Quarter</h3>
+                <p>Longhuaxinqu, longhuajiedao,shangyousongcun 80dong,101<br/>
+                    Shenzhenshi Guangdongsheng 518109
+                </p>
+            </div>
+        </div>
+
         <div class="col-md-6 col-md-offset-3">
             <h3 class="header header-primary card-title text-center" th:utext="#{contactus.title}">Contact Us</h3>
-
             <blc:form id="contact-us-form" th:action="@{/contactus/success}" method="post">
                 <div class="label-floating form-group">
                     <label class="control-label" for="name" th:utext="#{contactus.name}">Name</label>
