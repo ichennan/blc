@@ -11,27 +11,19 @@
 
     <div class="main">
         <div class="container-fluid">
-
-            <div class="row">
-                <a th:href="@{/merchandise}">
-                    <img class="img-responsive full-width" blc:src="@{/cmsstatic/img/banners/shirt-special.jpg}" />
-                </a>
-            </div>
-
             <div class="container">
-
                 <div class="row text-center">
                     <div id="home_feature">
-                        <h2>Bag or Marker Pens AFICIONADO?</h2> Create an account to join our Togood Frequent Care Program. The place to get all the deals on burn treatment.
+                        <h2>Togood's Top Selling Products</h2>
                     </div>
                 </div>
 
                 <hr />
 
                 <div class="row">
-                    <h3 class="text-center">
-                        Togood's Top Selling Products
-                    </h3>
+                    <!--<h3 class="text-center">-->
+                        <!--Togood's Top Selling Products-->
+                    <!--</h3>-->
 
                     <th:block th:if="${products}" id="products" class="group" th:each="product : ${products}" th:object="${product}" >
                         <div class="col-sm-6 col-md-3"  th:if="${product.isActive()}"
