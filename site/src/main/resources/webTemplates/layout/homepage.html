@@ -38,6 +38,24 @@
                         </div>
                     </th:block>
                 </div>
+
+                <!--Featured Products-->
+                <div class="row">
+                    <div class="container">
+                        <!--   Call RelatedProductsVariableExpression#findByCategory(categoryId, maxQuantiy). -->
+                        <div class="related-products show-top-border" th:object="${category}"
+                             th:with="relatedProducts=${#related_products.findByCategory(category.id, 99)}">
+                            <h3 class="title text-center" th:text="#{category.featuredProducts}"></h3>
+                            <div class="row row-centered">
+                                <div class="col-sm-6 col-md-3 col-centered" th:each="product : ${relatedProducts}" th:object="${product}"
+                                     th:include="catalog/partials/relatedProduct"
+                                     th:if="${product.isActive()}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Featured Products-->
             </div>
         </div>
     </div>
